@@ -15,7 +15,7 @@ This project is about an open source collection of extensions to the Spring fram
 
 ## Build 
 
-[![Build Status](https://secure.travis-ci.org/Unicon/springframework-addons.png)](http://travis-ci.org/Unicon/springframework-addons)
+[![Build Status](https://travis-ci.org/Unicon/springframework-addons.png)](https://travis-ci.org/Unicon/springframework-addons)
 
 You can build the project from source using the following Maven command:
 
