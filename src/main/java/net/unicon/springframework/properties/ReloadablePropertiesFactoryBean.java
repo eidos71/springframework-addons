@@ -97,6 +97,7 @@ public class ReloadablePropertiesFactoryBean extends PropertiesFactoryBean imple
     public String toString() {
         return this.getClass().getSimpleName();
     }
+
     class ReloadablePropertiesImpl extends ReloadablePropertiesBase implements ReconfigurableBean {
         public void reloadConfiguration() throws Exception {
             ReloadablePropertiesFactoryBean.this.reload(false);

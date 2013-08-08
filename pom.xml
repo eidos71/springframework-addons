@@ -29,7 +29,7 @@
     </licenses>
 
     <scm>
-        <connection>scm:git@github.com:Unicon/springframework-addons.git</connection>
+        <connection>scm:git:git@github.com:Unicon/springframework-addons.git</connection>
         <developerConnection>scm:git:git@github.com:Unicon/springframework-addons.git</developerConnection>
         <url>https://github.com/Unicon/springframework-addons</url>
         <tag>master</tag>
@@ -95,11 +95,6 @@
                         </reports>
                     </reportSet>
                 </reportSets>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-checkstyle-plugin</artifactId>
-                <version>2.9.1</version>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

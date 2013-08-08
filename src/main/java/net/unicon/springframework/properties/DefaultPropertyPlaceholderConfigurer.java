@@ -31,57 +31,72 @@ import java.util.Properties;
  * @see #setDefaultSeparator
  */
 public class DefaultPropertyPlaceholderConfigurer extends PropertyPlaceholderConfigurer {
+    /**
+     *
+     */
     public static final String DEFAULT_DEFAULT_SEPARATOR = "=";
 
+    /**
+     *
+     */
     private String defaultSeparator = DEFAULT_DEFAULT_SEPARATOR;
 
     /**
      * Set the string that separates a placeholder name from the default value.
      * The default is "=".
-     *
+     * @param def separator
      * @see #DEFAULT_DEFAULT_SEPARATOR
      */
-    public void setDefaultSeparator(String defaultSeparator) {
-        this.defaultSeparator = defaultSeparator;
+    public final void setDefaultSeparator(final String def) {
+        this.defaultSeparator = def;
     }
 
-    protected String resolvePlaceholder(String placeholderWithDefault, Properties props, int systemPropertiesMode) {
+    /**
+     * @param placeholderWithDefault   default placeholder
+     * @param props properties instance
+     * @param systemPropertiesMode  system properties mode
+     * @return  the resolved placeholder
+     */
+    protected final String resolvePlaceholder(final String placeholderWithDefault, final Properties props, final int systemPropertiesMode) {
         String placeholder = getPlaceholder(placeholderWithDefault);
         String resolved = super.resolvePlaceholder(placeholder, props, systemPropertiesMode);
-        if (resolved == null)
+        if (resolved == null) {
             resolved = getDefault(placeholderWithDefault);
+        }
         return resolved;
     }
 
     /**
      * extract the placeholder name from the complete placeholder string (between prefix and separator,
-     * or complete placeholder if no separator is found)
-     *
+     * or complete placeholder if no separator is found).
+     * @param placeholderWithDefault default placeholder
      * @see #setPlaceholderPrefix
      * @see #setDefaultSeparator
      * @see #setPlaceholderSuffix
+     * @return the placeholder
      */
-    protected String getPlaceholder(String placeholderWithDefault) {
+    protected final String getPlaceholder(final String placeholderWithDefault) {
         int separatorIdx = placeholderWithDefault.indexOf(defaultSeparator);
-        if (separatorIdx == -1)
+        if (separatorIdx == -1) {
             return placeholderWithDefault;
-        else
-            return placeholderWithDefault.substring(0, separatorIdx);
+        }
+        return placeholderWithDefault.substring(0, separatorIdx);
     }
 
     /**
-     * extract the default value from the complete placeholder (the part between separator and suffix)
-     *
+     * extract the default value from the complete placeholder (the part between separator and suffix).
+     * @param placeholderWithDefault
      * @return the default value, or null if none is given.
      * @see #setPlaceholderPrefix
      * @see #setDefaultSeparator
      * @see #setPlaceholderSuffix
      */
-    protected String getDefault(String placeholderWithDefault) {
+    protected final String getDefault(final String placeholderWithDefault) {
         int separatorIdx = placeholderWithDefault.indexOf(defaultSeparator);
-        if (separatorIdx == -1)
+        if (separatorIdx == -1) {
             return null;
-        else
+        } else {
             return placeholderWithDefault.substring(separatorIdx + 1);
+        }
     }
 }
