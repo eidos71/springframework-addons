@@ -1,4 +1,4 @@
-package net.unicon.springframework.properties;
+package net.unicon.springframework.addons.properties;
 
 import java.util.ArrayList;
 import java.util.List;

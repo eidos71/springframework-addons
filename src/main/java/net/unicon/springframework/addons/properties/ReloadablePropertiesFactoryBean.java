@@ -1,4 +1,4 @@
-package net.unicon.springframework.properties;
+package net.unicon.springframework.addons.properties;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

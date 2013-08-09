@@ -1,0 +1,9 @@
+[ {
+    "username" : "user1",
+    "password" : "notused",
+    "authorities" : [ "ROLE_ADMIN", "ROLE_USER" ]
+}, {
+    "username" : "user2",
+    "password" : "notused",
+    "authorities" : [ "ROLE_ADMIN" ]
+} ]

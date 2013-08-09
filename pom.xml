@@ -73,6 +73,8 @@
         <slf4j.version>1.7.2</slf4j.version>
         <spock.version>0.7-groovy-2.0</spock.version>
         <spring.version>3.2.3.RELEASE</spring.version>
+        <jackson.version>2.2.2</jackson.version>
+        <spring.security.version>3.1.4.RELEASE</spring.security.version>
     </properties>
 
     <reporting>
@@ -233,7 +235,6 @@
             <scope>provided</scope>
         </dependency>
 
-
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
@@ -259,6 +260,13 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
             <version>${spring.version}</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-core</artifactId>
+            <version>${spring.security.version}</version>
             <scope>compile</scope>
         </dependency>
 
@@ -292,18 +300,23 @@
 
         <dependency>
             <groupId>org.springframework</groupId>
-            <artifactId>spring-test</artifactId>
+            <artifactId>spring-context-support</artifactId>
             <version>${spring.version}</version>
             <scope>test</scope>
         </dependency>
 
         <dependency>
             <groupId>org.springframework</groupId>
-            <artifactId>spring-context-support</artifactId>
+            <artifactId>spring-test</artifactId>
             <version>${spring.version}</version>
             <scope>test</scope>
         </dependency>
 
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
     </dependencies>
 
     <!-- Jasig CAS Repository -->

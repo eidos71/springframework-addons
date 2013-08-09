@@ -1,4 +1,4 @@
-package net.unicon.springframework.properties;
+package net.unicon.springframework.addons.properties;
 
 import org.springframework.beans.BeanWrapper;
 import org.springframework.beans.BeanWrapperImpl;
