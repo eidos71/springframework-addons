@@ -29,6 +29,7 @@ Declare the project dependency in your Local CAS server `pom.xml` file as:
 <dependency>
     <groupId>net.unicon.springframework</groupId>
     <artifactId>springframework-addons</artifactId>
+    <!-- See above for the latest released version number -->
     <version>${springframework-addons.version}</version>
 </dependency>
 ```
