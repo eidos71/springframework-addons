@@ -9,10 +9,10 @@ import spock.lang.Specification
  * @author Unicon , inc.
  */
 @RunWith(Sputnik)
-class JsonDaoImplTests extends Specification {
+class JsonUserDetailServiceTests extends Specification {
 
     def resource = new ClassPathResource("userDetailsService.json")
-    def dao = new JsonDaoImpl(resource)
+    def dao = new JsonUserDetailsService(resource)
 
     def "User definitions must be able to find user1"() {
         when:

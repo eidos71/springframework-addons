@@ -22,14 +22,14 @@ import java.util.Set;
  * @author Misagh Moayyed mmoayyed@unicon.net
  * @since 0.1
  */
-public final class JsonDaoImpl implements UserDetailsService {
-    private final Logger logger = LoggerFactory.getLogger(JsonDaoImpl.class);
+public final class JsonUserDetailsService implements UserDetailsService {
+    private final Logger logger = LoggerFactory.getLogger(JsonUserDetailsService.class);
     private final ObjectMapper objectMapper = new ObjectMapper();
 
     private Map<String, User> usersMap = new HashMap<String, User>();
     private final Resource usersConfigFile;
 
-    public JsonDaoImpl(final Resource users) {
+    public JsonUserDetailsService(final Resource users) {
         this.usersConfigFile = users;
         objectMapper.setSerializationInclusion(JsonInclude.Include.NON_EMPTY);
         loadUsers();
