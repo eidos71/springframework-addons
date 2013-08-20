@@ -9,7 +9,7 @@
     </appender>
 
     <logger name="org.springframework">
-        <level value="WARN" />
+        <level value="INFO" />
     </logger>
 
     <logger name="net.unicon.springframework.addons">

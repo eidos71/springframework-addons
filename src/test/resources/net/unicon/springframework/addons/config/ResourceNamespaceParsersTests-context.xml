@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:resource="http://unicon.net/schema/resource"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://unicon.net/schema/resource http://unicon.net/schema/resource/resource.xsd ">
+
+
+    <resource:change-detector id="testChangeDetector"
+                                  watched-resource="classpath:/net/unicon/springframework/addons/config/servicesRegistry.conf"/>
+
+</beans>

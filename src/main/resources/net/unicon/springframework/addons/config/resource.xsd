@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema attributeFormDefault="unqualified"
+            elementFormDefault="qualified"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://unicon.net/schema/resource"
+            xmlns="http://unicon.net/schema/resource">
+
+    <xsd:element name="change-detector" type="change-detectorType"/>
+    <xsd:complexType name="change-detectorType">
+        <xsd:attribute type="xsd:string" name="id" use="required"/>
+        <xsd:attribute type="xsd:string" name="watched-resource" use="required"/>
+    </xsd:complexType>
+
+</xsd:schema>
+
+
